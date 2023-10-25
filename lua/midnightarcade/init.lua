@@ -1,5 +1,5 @@
 local M = {}
-local colors = require("colors")
+local colors = require "midnightarcade.colors"
 
 M.config = {
   options = {
