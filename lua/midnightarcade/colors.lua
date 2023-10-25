@@ -1,6 +1,14 @@
-local function set_colors()
+local function set_colors(config)
   -- Highlight groups
   local hi = vim.api.nvim_set_hl
+
+  -- If transparent_background is set to true, set the background to NONE
+  if config.options.transparent then
+    hi(0, "Normal", { blend = 0, fg = "#c0aef4", bg = "NONE" })
+  else
+    -- Otherwise, set it to normal color
+    hi(0, "Normal", { blend = 0, fg = "#c0aef4", bg = "#241E35" })
+  end
 
   hi(0, "@character.special", { link = "SpecialChar" })
   hi(0, "@constant.builtin", { link = "Special" })
