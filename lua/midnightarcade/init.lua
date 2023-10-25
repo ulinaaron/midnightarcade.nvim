@@ -13,8 +13,13 @@ function M.setup(options)
   M.set_colors()
 end
 
-function M.set_colors()
+function M.colorscheme()
   local hi = vim.api.nvim_set_hl
+
+  if vim.g.colors_name then
+    vim.cmd 'hi clear'
+  end
+  vim.g.colors_name = "midnightarcade"
 
   -- If transparent_background is set to true, set the background to NONE
   if M.config.options.transparent then

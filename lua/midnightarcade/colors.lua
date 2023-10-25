@@ -1,7 +1,4 @@
 local function set_colors()
-  if vim.g.colors_name ~= nil then vim.cmd('highlight clear') end
-  vim.g.colors_name = "MidnightArcade"
-
   -- Highlight groups
   local hi = vim.api.nvim_set_hl
 
