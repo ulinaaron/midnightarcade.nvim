@@ -10,7 +10,7 @@ M.config = {
 function M.setup(options)
   M.config = vim.tbl_extend('force', M.config, options or {})
 
-  M.set_colors()
+  M.colorscheme()
 end
 
 function M.colorscheme()
